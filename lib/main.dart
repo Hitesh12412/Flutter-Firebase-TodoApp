@@ -31,16 +31,13 @@ class _MyAppState extends State<MyApp> {
   checkLogin() async {
     String tokne = await authClass.getToken();
     print("tokne");
-    if (tokne != null)
-      setState(() {
-        currentPage = HomePage();
-      });
+    setState(() {
+      currentPage = HomePage();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: currentPage,
-    );
+    return MaterialApp(home: currentPage);
   }
 }
